@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './Weather.module.scss'
 import pathIconsSVG from '../../assets/icons-svg'
 import {GetWeatherRT} from '../../api/apiType'
+import WeatherMap from './WeatherMap'
 
 const mmHg = (mbar: number) => Math.floor((mbar * 0.750062) * 100) / 100
 const date = (mm: number) => {
@@ -30,12 +31,13 @@ const Weather = (props: { data: GetWeatherRT }) => {
                <ListItem title={'Восход'} value={data.sunrise}/>
                <ListItem title={'Закат'} value={data.sunset}/>
             </ul>
+            <WeatherMap lat={data.lat} lon={data.lon}/>
          </div>
       </div>
    )
 }
 
-const ListItem = (props: {title: string, value: string, dim?: any}) => {
+const ListItem = (props: { title: string, value: string, dim?: any }) => {
    return <li>
       <h4 className={classes.dataTitle}>{props.title}</h4>
       <span className={classes.dataValue}>{props.value}{props.dim}</span>
