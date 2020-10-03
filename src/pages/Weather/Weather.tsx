@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Weather.module.scss'
-import pathIconsSVG from '../../assets/svg'
+import pathIconsSVG from '../../assets/icons-svg'
 import {GetWeatherRT} from '../../api/apiType'
 
 const mmHg = (mbar: number) => Math.floor((mbar * 0.750062) * 100) / 100
@@ -17,8 +17,7 @@ const Weather = (props: { data: GetWeatherRT }) => {
       <div className={classes.weatherWrapper}>
          <div className={classes.weatherCity}>
             <h2>{data.city_name}</h2>
-            {/*<img src={pathIconsSVG[data.weather.icon]} alt="icon"/>*/}
-            <img src={pathIconsSVG['r01n']} alt="icon"/>
+            <img src={pathIconsSVG[data.weather.icon]} alt="icon"/>
          </div>
          <div className={classes.weatherData}>
             <ul>
