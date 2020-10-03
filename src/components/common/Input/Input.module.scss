@@ -1,6 +1,11 @@
+@import "../../../styles/variables";
+
 .label {
-
   .customInput {
-
+    border: 1px solid $color-accent;
+    outline: none;
+    padding: 6px 10px;
+    font-size: 18px;
+    min-height: 40px;
   }
 }

@@ -1,8 +1,15 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
 .header {
   position: fixed;
-  height: 50px;
+  height: $header-h;
   top: 0;
   left: 0;
   right: 0;
-  background: #aaa;
+  background: $color-accent;
+
+  .container {
+    @extend %container;
+  }
 }

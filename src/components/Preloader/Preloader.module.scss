@@ -1,6 +1,11 @@
 .wrapper {
-  width: 100%;
-  height: 10px;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 100vw;
+  height: 3px;
   overflow: hidden;
   margin: auto;
 }
@@ -8,13 +13,13 @@
 .loadingProgress {
   background-color: rgb(255, 255, 255);
   margin-top: 0;
-  margin-left: -250px;
+  margin-left: 0;
   animation-name: bounce_loadingProgress;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-  width: 250px;
-  height: 5px;
+  width: 400px;
+  height: 3px;
 }
 
 @keyframes bounce_loadingProgress {
