@@ -6,10 +6,13 @@ type InputPropsType
    & { error?: string }
 
 const Input = (props: InputPropsType) => {
-   const {error, ...restProps} = props
    return (
       <label className={classes.label}>
-         <input type="text" {...restProps} className={classes.customInput}/>
+         <input type="text"
+                {...props}
+                placeholder={props.error ? props.error : props.placeholder}
+                className={classes.customInput}
+         />
       </label>
    )
 }

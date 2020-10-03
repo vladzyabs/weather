@@ -1,6 +1,7 @@
 import {GetWeatherRT} from '../../api/apiType'
 import {Dispatch} from 'redux'
 import {API} from '../../api/api'
+import {appSetError, AppSetErrorActionType, appSetStatus, AppSetStatusActionType} from '../appReducer/appReducer'
 
 const SET_WEATHER = 'WEATHER/SET_WEATHER'
 
@@ -37,11 +38,17 @@ type ActionType
 
 // thunks
 export const getWeatherTC = (city: string) =>
-   async (dispatch: Dispatch) => {
+   async (dispatch: DispatchType) => {
+      dispatch(appSetStatus('loading'))
       const response = await API.getWeather({city})
       try {
          dispatch(setWeather(response.data.data))
+         dispatch(appSetStatus('success'))
       } catch (e) {
-         console.log(e)
+         dispatch(appSetError('Error'))
+         dispatch(appSetStatus('failed'))
       }
    }
+
+type DispatchType
+   = Dispatch<ActionType | AppSetStatusActionType | AppSetErrorActionType>

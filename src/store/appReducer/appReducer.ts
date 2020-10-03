@@ -1,6 +1,6 @@
 const APP_SET_STATUS = 'APP/SET_STATUS'
 const APP_SET_ERROR = 'APP/SET_ERROR'
-type RequestStatusType = 'idle' | 'loading' | 'success' | 'failed'
+export type RequestStatusType = 'idle' | 'loading' | 'success' | 'failed'
 
 const initialState = {
    status: 'idle' as RequestStatusType,
