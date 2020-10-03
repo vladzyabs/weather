@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {getWeatherTC} from './store/weatherReducer/weatherReducer'
 import {AppRootStoreType} from './store/rootReducer'
 import {GetWeatherRT} from './api/apiType'
+import {Input} from './components'
 
 const App = () => {
 
@@ -18,7 +19,7 @@ const App = () => {
    return (
       <div className="App">
          <h1>weather-app</h1>
-         <input type="text" value={city} onChange={e => setCity(e.target.value)}/>
+         <Input type="text" value={city} onChange={e => setCity(e.target.value)}/>
          <button onClick={onclick}>Search</button>
          {
             count > 0 &&
