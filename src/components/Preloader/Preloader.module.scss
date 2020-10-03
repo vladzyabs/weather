@@ -1,0 +1,28 @@
+.wrapper {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.loadingProgress {
+  background-color: rgb(255, 255, 255);
+  margin-top: 0;
+  margin-left: -250px;
+  animation-name: bounce_loadingProgress;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  width: 250px;
+  height: 5px;
+}
+
+@keyframes bounce_loadingProgress {
+  0% {
+    margin-left: 0;
+  }
+
+  100% {
+    margin-left: 100%;
+  }
+}
