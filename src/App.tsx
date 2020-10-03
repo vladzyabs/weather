@@ -3,7 +3,7 @@ import {Switch, Route} from 'react-router-dom'
 import classes from './styles/App.module.scss'
 import {Header, Preloader} from './components'
 import {ROUTES} from './routes'
-import Weather from './pages/Weather/Weather'
+import WeatherPage from './pages/Weather/WeatherPage'
 import {useSelector} from 'react-redux'
 import {AppRootStoreType} from './store/rootReducer'
 import {RequestStatusType} from './store/appReducer/appReducer'
@@ -20,7 +20,7 @@ const App = () => {
          <Header/>
          <div className={classes.content}>
             <Switch>
-               <Route exact path={ROUTES.HOME} render={() => <Weather/>}/>
+               <Route exact path={ROUTES.HOME} render={() => <WeatherPage/>}/>
             </Switch>
          </div>
       </div>

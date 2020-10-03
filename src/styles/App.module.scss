@@ -3,5 +3,6 @@
 .App {
   .content {
     margin-top: $header-h;
+    min-height: calc(100vh - 50px);
   }
 }

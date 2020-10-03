@@ -21,7 +21,7 @@ export type GetWeatherRT = {
    wind_dir: number             // (integer optional): Wind direction (degrees)
    wind_cdir: string               // (string optional): Cardinal wind direction
    wind_cdir_full: string       // (string optional): Cardinal wind direction (text)
-   wind_speed: number           // (number optional): Wind speed - Default (m/s)
+   wind_spd: number           // (number optional): Wind speed - Default (m/s)
    temp: number                 // (number optional): Temperature - Default (C)
    app_temp: number             // (number optional): Apparent temperature - Default (C)
    clouds: number               // (integer optional): Cloud cover (%)

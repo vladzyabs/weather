@@ -1,4 +1,5 @@
 import React, {KeyboardEvent} from 'react'
+import classes from './Weather.module.scss'
 import {Button, Input} from '../../components'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
@@ -36,14 +37,16 @@ const SearchForm = (props: SearchFormPropsType) => {
    }
 
    return (
-      <form onSubmit={formik.handleSubmit}>
-         <Input style={styles.input}
-                onKeyPress={onKeyPressHandler}
-                error={formik.touched.city ? formik.errors.city : ''}
-                {...formik.getFieldProps('city')}/>
-         <Button type="submit"
-                 style={styles.button}>Search</Button>
-      </form>
+      <div className={classes.weatherForm}>
+         <form onSubmit={formik.handleSubmit}>
+            <Input style={styles.input}
+                   onKeyPress={onKeyPressHandler}
+                   error={formik.touched.city ? formik.errors.city : ''}
+                   {...formik.getFieldProps('city')}/>
+            <Button type="submit"
+                    style={styles.button}>Search</Button>
+         </form>
+      </div>
    )
 }
 
