@@ -6,7 +6,7 @@ import WeatherMap from './WeatherMap'
 import moment from 'moment'
 import 'moment-timezone'
 
-const mmHg = (mbar: number) => Math.floor((mbar * 0.750062) * 100) / 100
+const mmHg = (mbar: number) => Math.floor(mbar * 0.750062)
 const convertUTC = (time: string, tz: string) => {
    const offset = moment().tz(tz).utcOffset() * 60
    const hms = `${time}:00`.split(':')
@@ -30,7 +30,7 @@ const Weather = (props: { data: GetWeatherRT }) => {
                <ListItem title={'Температура'} value={`${data.temp}`} dim={<span> &#8451;</span>}/>
                <ListItem title={'Давление'} value={`${mmHg(data.pres)}`} dim={<span> мм.рт.ст.</span>}/>
                <ListItem title={'Влажность воздуха'} value={`${Math.ceil(data.rh)}`} dim={<span> &#37;</span>}/>
-               <ListItem title={'Осадки'} value={`${data.precip}`} dim={<span> мм.</span>}/>
+               <ListItem title={'Осадки'} value={`${Math.ceil(data.precip)}`} dim={<span> мм.</span>}/>
                <ListItem title={'Скорость ветра'} value={`${Math.ceil(data.wind_spd)}`} dim={<span> м/с</span>}/>
                <ListItem title={'Направление ветра'} value={data.wind_cdir}/>
                <ListItem title={'Местное вермя'} value={localTime}/>

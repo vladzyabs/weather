@@ -12,5 +12,47 @@
 
   .container {
     @extend %container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+  }
+
+  .logo {
+    img {
+      height: 40px;
+    }
+  }
+
+  .navbar {
+    a {
+      position: relative;
+      color: $color-text-secondary;
+      margin-right: 10px;
+      font-size: 18px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: $color-text-secondary;
+        border-radius: 3px;
+        transform: scale(0);
+        transform-origin: center;
+        transition: .2s;
+      }
+
+      &:hover:after {
+        transform: scale(1);
+      }
+    }
   }
 }
