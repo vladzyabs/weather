@@ -1,5 +1,5 @@
 import React from 'react'
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import classes from './styles/App.module.scss'
 import {ErrorMessage, Header, Preloader} from './components'
 import {ROUTES} from './routes'
@@ -25,7 +25,8 @@ const App = () => {
          <div className={classes.content}>
             <React.Suspense fallback={<Preloader/>}>
                <Switch>
-                  <Route exact path={ROUTES.HOME} render={() => <WeatherPage/>}/>
+                  <Redirect exact from={'/'} to={ROUTES.HOME} />
+                  <Route path={ROUTES.HOME} render={() => <WeatherPage/>}/>
                   <Route path={ROUTES.ABOUT} render={() => <AboutPage/>}/>
                   <Route component={NotFound}/>
                </Switch>
