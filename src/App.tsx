@@ -7,6 +7,7 @@ import WeatherPage from './pages/Weather/WeatherPage'
 import {useSelector} from 'react-redux'
 import {AppRootStoreType} from './store/rootReducer'
 import {RequestStatusType} from './store/appReducer/appReducer'
+import NotFound from './pages/NotFound/NotFound'
 
 const AboutPage = React.lazy(() => import('./pages/About/About'))
 
@@ -25,7 +26,8 @@ const App = () => {
             <React.Suspense fallback={<Preloader/>}>
                <Switch>
                   <Route exact path={ROUTES.HOME} render={() => <WeatherPage/>}/>
-                  <Route exact path={ROUTES.ABOUT} render={() => <AboutPage/>}/>
+                  <Route path={ROUTES.ABOUT} render={() => <AboutPage/>}/>
+                  <Route component={NotFound}/>
                </Switch>
             </React.Suspense>
          </div>
