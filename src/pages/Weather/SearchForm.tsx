@@ -6,7 +6,7 @@ import * as Yup from 'yup'
 
 const validationSchema = Yup.object({
    city: Yup.string()
-      .required('Введите город...'),
+      .required('Введите город...')
 })
 
 type SearchFormPropsType = {

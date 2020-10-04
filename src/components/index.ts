@@ -3,3 +3,4 @@ export {default as Button} from './common/Button/Button'
 
 export {default as Header} from './Header/Header'
 export {default as Preloader} from './Preloader/Preloader'
+export {default as ErrorMessage} from './ErrorMessage/ErrorMessage'

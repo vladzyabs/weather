@@ -26,7 +26,7 @@ export const appSetStatus = (status: RequestStatusType) => ({
 } as const)
 export type AppSetStatusActionType = ReturnType<typeof appSetStatus>
 
-export const appSetError = (error: string) => ({
+export const appSetError = (error: string | null) => ({
    type: APP_SET_ERROR,
    payload: error,
 } as const)

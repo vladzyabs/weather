@@ -40,12 +40,17 @@ type ActionType
 export const getWeatherTC = (city: string) =>
    async (dispatch: DispatchType) => {
       dispatch(appSetStatus('loading'))
-      const response = await API.getWeather({city})
       try {
-         dispatch(setWeather(response.data.data))
-         dispatch(appSetStatus('success'))
-      } catch (e) {
-         dispatch(appSetError('Error'))
+         const response = await API.getWeather({city})
+         if (response.status === 200) {
+            dispatch(setWeather(response.data.data))
+            dispatch(appSetStatus('success'))
+         } else {
+            dispatch(appSetError('Oops, something went wrong, please try again'))
+            dispatch(appSetStatus('failed'))
+         }
+      } catch (error) {
+         dispatch(appSetError(error.message))
          dispatch(appSetStatus('failed'))
       }
    }
