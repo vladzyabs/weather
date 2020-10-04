@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/weather/static/css/main.420697e0.chunk.css",
-    "main.js": "/weather/static/js/main.83bee5a6.chunk.js",
-    "main.js.map": "/weather/static/js/main.83bee5a6.chunk.js.map",
+    "main.css": "/weather/static/css/main.f8b2e841.chunk.css",
+    "main.js": "/weather/static/js/main.17cfc011.chunk.js",
+    "main.js.map": "/weather/static/js/main.17cfc011.chunk.js.map",
     "runtime-main.js": "/weather/static/js/runtime-main.e6fc1858.js",
     "runtime-main.js.map": "/weather/static/js/runtime-main.e6fc1858.js.map",
-    "static/js/2.63f843d1.chunk.js": "/weather/static/js/2.63f843d1.chunk.js",
-    "static/js/2.63f843d1.chunk.js.map": "/weather/static/js/2.63f843d1.chunk.js.map",
+    "static/js/2.535fe6e6.chunk.js": "/weather/static/js/2.535fe6e6.chunk.js",
+    "static/js/2.535fe6e6.chunk.js.map": "/weather/static/js/2.535fe6e6.chunk.js.map",
     "static/css/3.ed715bda.chunk.css": "/weather/static/css/3.ed715bda.chunk.css",
     "static/js/3.3a47b671.chunk.js": "/weather/static/js/3.3a47b671.chunk.js",
     "static/js/3.3a47b671.chunk.js.map": "/weather/static/js/3.3a47b671.chunk.js.map",
     "index.html": "/weather/index.html",
-    "precache-manifest.34436ca3197047786bb9af0269c548fe.js": "/weather/precache-manifest.34436ca3197047786bb9af0269c548fe.js",
+    "precache-manifest.764e2d3a4eedbb66d1e677b33f1b9970.js": "/weather/precache-manifest.764e2d3a4eedbb66d1e677b33f1b9970.js",
     "service-worker.js": "/weather/service-worker.js",
     "static/css/3.ed715bda.chunk.css.map": "/weather/static/css/3.ed715bda.chunk.css.map",
-    "static/css/main.420697e0.chunk.css.map": "/weather/static/css/main.420697e0.chunk.css.map",
-    "static/js/2.63f843d1.chunk.js.LICENSE.txt": "/weather/static/js/2.63f843d1.chunk.js.LICENSE.txt",
+    "static/css/main.f8b2e841.chunk.css.map": "/weather/static/css/main.f8b2e841.chunk.css.map",
+    "static/js/2.535fe6e6.chunk.js.LICENSE.txt": "/weather/static/js/2.535fe6e6.chunk.js.LICENSE.txt",
     "static/media/a01d.svg": "/weather/static/media/a01d.ad789581.svg",
     "static/media/a01n.svg": "/weather/static/media/a01n.ad789581.svg",
     "static/media/a02d.svg": "/weather/static/media/a02d.ad789581.svg",
@@ -84,8 +84,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.e6fc1858.js",
-    "static/js/2.63f843d1.chunk.js",
-    "static/css/main.420697e0.chunk.css",
-    "static/js/main.83bee5a6.chunk.js"
+    "static/js/2.535fe6e6.chunk.js",
+    "static/css/main.f8b2e841.chunk.css",
+    "static/js/main.17cfc011.chunk.js"
   ]
 }
