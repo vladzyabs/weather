@@ -9,6 +9,10 @@ import {GetWeatherRT} from '../../api/apiType'
 
 const WeatherPage = () => {
 
+   React.useEffect(() => {
+      document.title = 'Weather'
+   })
+
    const dispatch = useDispatch()
    const weather = useSelector<AppRootStoreType, GetWeatherRT[]>(state => state.weather.data)
 

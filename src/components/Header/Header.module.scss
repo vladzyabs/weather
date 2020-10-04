@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   background: $color-accent;
-  box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
 
   .container {
     @extend %container;
@@ -52,6 +52,13 @@
 
       &:hover:after {
         transform: scale(1);
+      }
+
+      @media (max-width: 480px) {
+        font-size: 16px;
+        &:after {
+          height: 2px;
+        }
       }
     }
   }

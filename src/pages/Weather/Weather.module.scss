@@ -11,8 +11,14 @@
   .weatherForm {
     margin-bottom: 50px;
 
-    input, button{
-      box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.3);
+    input, button {
+      box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      input {
+        max-width: 200px;
+      }
     }
   }
 

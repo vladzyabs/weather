@@ -2,6 +2,11 @@ import React from 'react'
 import classes from './About.module.scss'
 
 const AboutPage = () => {
+
+   React.useEffect(() => {
+      document.title = 'About app'
+   })
+
    return (
       <div className={classes.container}>
          <h1>О приложении</h1>
@@ -10,6 +15,7 @@ const AboutPage = () => {
          <p>В проекте используется интерактивная карта от Yandex. (<a href="https://yandex.by/maps" target="_blank">yandex maps</a>)</p>
          <p>Приложение разработано на React.js с использование redux, axios, thunk и других инструментов.</p>
          <p>Разработчик: <a href="mailto:vladzyaba@gmail.com">Зябский Владислав</a></p>
+         <p>Ссылка на исходный код: <a href="https://github.com/vladzyabs/weather" target="_blank">github.com/vladzyabs/weather</a></p>
       </div>
    )
 }
