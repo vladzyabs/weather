@@ -14,8 +14,8 @@ const Header = () => {
                </NavLink>
             </div>
             <nav className={classes.navbar}>
-               <NavLink to={ROUTES.HOME}>Главная</NavLink>
-               <NavLink to={ROUTES.ABOUT}>О приложении</NavLink>
+               <NavLink to={ROUTES.HOME} activeClassName={classes.active}>Главная</NavLink>
+               <NavLink to={ROUTES.ABOUT} activeClassName={classes.active}>О приложении</NavLink>
             </nav>
          </div>
       </header>
