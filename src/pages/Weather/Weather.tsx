@@ -17,7 +17,6 @@ const convertUTC = (time: string, tz: string) => {
 
 const Weather = (props: { data: GetWeatherRT }) => {
    const {data} = props
-
    const localTime = moment().tz(data.timezone).format('LT')
 
    return (

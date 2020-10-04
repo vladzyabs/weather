@@ -14,5 +14,7 @@ export const API = {
    getWeather: ({city}: GetWeatherPT) =>
       instance.get<ResponseType<GetWeatherRT>>(`current?city=${city}`),
    getSubscriptionLimits: () =>
-      instance.get(`subscription/usage`)
+      instance.get(`subscription/usage`),
+   getAlert: (lat: number, lon: number) =>
+      instance.get(`alerts?lat=${lat}&lon=${lon}`) ,
 }

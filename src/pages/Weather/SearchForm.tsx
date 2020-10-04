@@ -1,13 +1,7 @@
 import React, {KeyboardEvent} from 'react'
 import classes from './Weather.module.scss'
-import {Button, Input} from '../../components'
+import {Button, ErrorMessage, Input} from '../../components'
 import {useFormik} from 'formik'
-import * as Yup from 'yup'
-
-const validationSchema = Yup.object({
-   city: Yup.string()
-      .required('Введите город...')
-})
 
 type SearchFormPropsType = {
    onSubmit: (city: string) => void
@@ -19,7 +13,15 @@ const SearchForm = (props: SearchFormPropsType) => {
       initialValues: {
          city: '',
       },
-      validationSchema,
+      validate: values => {
+         const errors: any = {}
+         if (!values.city) {
+            errors.city = 'Введите город'
+         } else if (!/^[а-яa-z]+$/i.test(values.city)) {
+            errors.city = 'Не используйте цифры и спец.символы'
+         }
+         return errors
+      },
       onSubmit: values => {
          props.onSubmit(values.city)
       },
@@ -38,6 +40,7 @@ const SearchForm = (props: SearchFormPropsType) => {
 
    return (
       <div className={classes.weatherForm}>
+         {formik.errors.city && <ErrorMessage error={formik.errors.city}/>}
          <form onSubmit={formik.handleSubmit}>
             <Input style={styles.input}
                    onKeyPress={onKeyPressHandler}

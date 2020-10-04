@@ -45,6 +45,9 @@ export const getWeatherTC = (city: string) =>
          if (response.status === 200) {
             dispatch(setWeather(response.data.data))
             dispatch(appSetStatus('success'))
+         } else if (response.status === 204) {
+            dispatch(appSetError('Проверьте введенный вами город!'))
+            dispatch(appSetStatus('failed'))
          } else {
             dispatch(appSetError('Oops, something went wrong, please try again'))
             dispatch(appSetStatus('failed'))
