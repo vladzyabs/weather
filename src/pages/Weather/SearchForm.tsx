@@ -17,7 +17,7 @@ const SearchForm = (props: SearchFormPropsType) => {
          const errors: any = {}
          if (!values.city) {
             errors.city = 'Введите город'
-         } else if (!/^[а-яa-z]+$/i.test(values.city)) {
+         } else if (/^[0-9/|.?!`~@#$%^&*()-_=+:;]+$/i.test(values.city)) {
             errors.city = 'Не используйте цифры и спец.символы'
          }
          return errors
